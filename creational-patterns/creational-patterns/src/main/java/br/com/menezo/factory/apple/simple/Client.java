@@ -6,7 +6,7 @@ import br.com.menezo.factory.apple.simple.model.IPhone;
 public class Client {
 	
 	public static void main(String[] args) {
-		
+
 		System.out.println("### Ordering an iPhone X");
 		IPhone iphone = IPhoneSimpleFactory.orderIphone("X", "standard");
 		System.out.println(iphone);
