@@ -27,7 +27,7 @@ public class Client {
 
 		CarService carService2 = restFactory.getCarService();
 		carService2.save("Palio");
-		carService2.update("Gol"); 
+		carService2.update("Gol");
 
 	}
 }

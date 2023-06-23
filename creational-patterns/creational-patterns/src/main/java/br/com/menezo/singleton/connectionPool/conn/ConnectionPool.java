@@ -6,15 +6,20 @@ import java.util.List;
 public class ConnectionPool {
 	private final static int POOL_SIZE = 2;
 	private List<Connection> connectionsPool;
+	private static ConnectionPool singleton = new ConnectionPool();
 	
-	public ConnectionPool() {
+	private ConnectionPool() {
 		System.out.println("Creating Connection Pool");
 		connectionsPool = new ArrayList<Connection>();
 		for(int i = 0; i < POOL_SIZE; i++) {
 			connectionsPool.add(new Connection());
 		}
 	}
-	
+
+	public static ConnectionPool getInstance() {
+		return singleton;
+	}
+
 	public Connection getConnection() {
 		Connection avaiable = null;
 		for(Connection conn: connectionsPool) {
