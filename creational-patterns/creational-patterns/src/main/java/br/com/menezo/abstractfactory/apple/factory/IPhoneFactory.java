@@ -14,11 +14,13 @@ public abstract class IPhoneFactory {
 		IPhone device = null;
 		
 		device = createIPhone(level);
-		
-		device.getHardware();
-		device.assemble();
-		device.certificates();
-		device.pack();
+
+		if (device != null) {
+			device.getHardware();
+			device.assemble();
+			device.certificates();
+			device.pack();
+		}
 		
 		return device;
 	}
